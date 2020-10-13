@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body>
+    <h1>Student List </h1>
+    <label for="name"></label>
+    <input id="name" type="text" name="name"><br>
+    <label for="ID"></label>
+    <input id="ID" type="text" name="ID"><br>
+    <label for="major"></label>
+    <select id="major" name="major">
+        <option value="CS">CS</option>
+        <option value="CSE">CSE</option>
+        <option value="AI">AI</option>
+    </select>
+    <button type="submit" onclick="showInput()">submit</button>
+
+    <ul id="display">
+
+    </ul>
+    <h2>Normal search</h2>
+    <input type="text" placeholder="Search.." id="search" name="search">
+    <button onclick="search()" type="submit"><i class="fa fa-search"></i>search</button>
+    <p id="insearch">
+
+    </p>
+    <h2>Dynamic Search</h2>
+    <p>I don't need to a button :)</p>
+    <input type="text" id="myInput" onkeyup="dynamicnSearch()" placeholder="Search for names.." title="Type in a name">
+
+    <table id="myTable">
+        <tr class="header">
+            <th style="width:33%;">Name</th>
+            <th style="width:33%;">ID</th>
+            <th style="width:33%;">Major</th>
+        </tr>
+    </table>
+
+    <button onclick="sortMe()" type="button">Sort me</button>
+    <table id="my-table-is-sorted">
+        <tr class="header">
+            <th style="width:33%;">Name</th>
+            <th style="width:33%;">ID</th>
+            <th style="width:33%;">Major</th>
+        </tr>
+    </table>
+    <button onclick="sortMeInReverse()" type="button">Sort me in reverse</button>
+    <table id="my-table-is-sorted-reverse">
+        <tr class="header">
+            <th style="width:33%;">Name</th>
+            <th style="width:33%;">ID</th>
+            <th style="width:33%;">Major</th>
+        </tr>
+    </table>
+    <script type="text/javascript" src="./student.js"></script>
+</body>
+
+</html>
