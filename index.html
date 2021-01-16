@@ -4,55 +4,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Students Registration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<body>
+<body style="padding: 100px;">
     <h1>Student List </h1>
-    <label for="name"></label>
-    <input id="name" type="text" name="name"><br>
-    <label for="ID"></label>
-    <input id="ID" type="text" name="ID"><br>
-    <label for="major"></label>
-    <select id="major" name="major">
-        <option value="CS">CS</option>
-        <option value="CSE">CSE</option>
-        <option value="AI">AI</option>
-    </select>
-    <button type="submit" onclick="showInput()">submit</button>
-
-    <ul id="display">
-
-    </ul>
+    <div style="padding: 10px;">
+        <label class="form-label" for="name">Please Enter The student name</label>
+        <input class="form-control" class="form-control" id="name" type="text" name="name"><br>
+    </div>
+    <div style="padding: 10px;">
+        <label class="form-label" for="ID">Please Enter The student ID</label>
+        <input class="form-control" id="ID" type="text" name="ID"><br>
+    </div>
+    <div style="padding: 10px;">
+        <label class="form-label" for="major">Please Select the student major</label>
+        <select class="form-select" id="major" name="major">
+            <option value="CS">CS</option>
+            <option value="CSE">CSE</option>
+            <option value="AI">AI</option>
+        </select>
+    </div>
+    <div style="padding: 10px;">
+        <button class="btn btn-primary" type="submit" onclick="showInput()">submit</button>
+    </div>
     <h2>Normal search</h2>
-    <input type="text" placeholder="Search.." id="search" name="search">
-    <button onclick="search()" type="submit"><i class="fa fa-search"></i>search</button>
-    <p id="insearch">
+    <input class="form-control" type="text" placeholder="Search.." id="search" name="search">
+    <div style="padding: 10px;">
+        <button class="btn btn-success" onclick="search()" type="submit"><i class="fa fa-search"></i>search</button>
+    </div>
 
-    </p>
     <h2>Dynamic Search</h2>
-    <p>I don't need to a button :)</p>
-    <input type="text" id="myInput" onkeyup="dynamicnSearch()" placeholder="Search for names.." title="Type in a name">
-
-    <table id="myTable">
+    <div style="padding: 10px;">
+        <input class="form-control" type="text" id="myInput" onkeyup="dynamicnSearch()" placeholder="Search for names.." title="Type in a name">
+    </div>
+    <table class="table table-striped table-hover" id="myTable">
         <tr class="header">
             <th style="width:33%;">Name</th>
             <th style="width:33%;">ID</th>
             <th style="width:33%;">Major</th>
         </tr>
     </table>
-
-    <button onclick="sortMe()" type="button">Sort me</button>
-    <table id="my-table-is-sorted">
+    <div style="padding: 10px;">
+        <button class="btn btn-success" onclick="sortMe()" type="button">Sort the student list</button>
+    </div>
+    <table class="table table-striped table-hover" id="my-table-is-sorted">
         <tr class="header">
             <th style="width:33%;">Name</th>
             <th style="width:33%;">ID</th>
             <th style="width:33%;">Major</th>
         </tr>
     </table>
-    <button onclick="sortMeInReverse()" type="button">Sort me in reverse</button>
-    <table id="my-table-is-sorted-reverse">
+    <div style="padding: 10px;">
+        <button class="btn btn-success" onclick="sortMeInReverse()" type="button">Sort the student list in reverse</button>
+    </div>
+    <table class="table table-striped table-hover" id="my-table-is-sorted-reverse">
         <tr class="header">
             <th style="width:33%;">Name</th>
             <th style="width:33%;">ID</th>
